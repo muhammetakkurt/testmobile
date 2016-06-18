@@ -3371,6 +3371,7 @@ function getCurrentLocation()
    CheckGPS.check(function win(){
     //GPS is enabled! 
      loader.show();
+     onsenAlert(geolocationSuccess+'-'+geolocationError);
 	 navigator.geolocation.getCurrentPosition(geolocationSuccess,geolocationError, 
 	 { timeout:5000 , enableHighAccuracy: true } );	
    },
