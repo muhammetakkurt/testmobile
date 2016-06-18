@@ -3366,14 +3366,28 @@ function initMerchantMap(data)
 	}
 }
 
+function testSuccess(pos) {
+  var crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log('Latitude : ' + crd.latitude);
+  console.log('Longitude: ' + crd.longitude);
+  console.log('More or less ' + crd.accuracy + ' meters.');
+};
+
+function testError(err) {
+  console.warn('ERROR(' + err.code + '): ' + err.message);
+};
+
+
+
 function getCurrentLocation()
 {	
    CheckGPS.check(function win(){
     //GPS is enabled! 
      loader.show();
-     onsenAlert(geolocationSuccess+'-'+geolocationError);
-	 navigator.geolocation.getCurrentPosition(geolocationSuccess,geolocationError, 
-	 { timeout:5000 , enableHighAccuracy: true } );	
+     navigator.geolocation.getCurrentPosition(testSuccess, testError, { timeout:5000 , enableHighAccuracy: true });
+     
    },
    function fail(){
       //GPS is disabled!
