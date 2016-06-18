@@ -3372,6 +3372,7 @@ function testSuccess(pos) {
   console.log('Your current position is:');
   console.log('Latitude : ' + crd.latitude);
   console.log('Longitude: ' + crd.longitude);
+  onsenAlert('Latitude : ' + crd.latitude + 'Longitude: ' + crd.longitude);
   console.log('More or less ' + crd.accuracy + ' meters.');
 };
 
