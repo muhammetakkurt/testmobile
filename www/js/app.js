@@ -3402,9 +3402,9 @@ function getCurrentLocation()
 
 function geolocationSuccess(position)
 {
-	var position = pos.coords;
-	var params="lat="+position.latitude;
-	params+="&lng="+position.longitude;
+	var crd = position.coords;
+	var params="lat="+crd.latitude;
+	params+="&lng="+crd.longitude;
 	onsenAlert(params);
 	callAjax("reverseGeoCoding",params);
 }
