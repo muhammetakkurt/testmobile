@@ -511,8 +511,6 @@ function callAjax(action,params)
 	}
 	
 	dump(ajax_url+"/"+action+"?"+params);
-	
-	onsenAlert(ajax_url+"/"+action+"?"+params);
 
     ajax_request = $.ajax({
 		url: ajax_url+"/"+action, 
