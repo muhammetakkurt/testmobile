@@ -3366,29 +3366,14 @@ function initMerchantMap(data)
 	}
 }
 
-function testSuccess(pos) {
-  var crd = pos.coords;
-
-  console.log('Your current position is:');
-  console.log('Latitude : ' + crd.latitude);
-  console.log('Longitude: ' + crd.longitude);
-  onsenAlert('Latitude : ' + crd.latitude + 'Longitude: ' + crd.longitude);
-  console.log('More or less ' + crd.accuracy + ' meters.');
-};
-
-function testError(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
-};
-
-
-
 function getCurrentLocation()
 {	
    CheckGPS.check(function win(){
     //GPS is enabled! 
      loader.show();
-     navigator.geolocation.getCurrentPosition(testSuccess, testError, { timeout:5000 , enableHighAccuracy: true });
-     
+
+	 navigator.geolocation.getCurrentPosition(geolocationSuccess,geolocationError, 
+	 { timeout:5000 , enableHighAccuracy: true } );	
    },
    function fail(){
       //GPS is disabled!
@@ -3417,9 +3402,10 @@ function getCurrentLocation()
 
 function geolocationSuccess(position)
 {
-	dump(position);
-	var params="lat="+position.coords.latitude;
-	params+="&lng="+position.coords.longitude;
+	var position = pos.coords;
+	var params="lat="+position.latitude;
+	params+="&lng="+position.longitude;
+	onsenAlert(params);
 	callAjax("reverseGeoCoding",params);
 }
 
