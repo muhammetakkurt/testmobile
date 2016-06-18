@@ -512,6 +512,8 @@ function callAjax(action,params)
 	
 	dump(ajax_url+"/"+action+"?"+params);
 	
+	onsenAlert(ajax_url+"/"+action+"?"+params);
+
     ajax_request = $.ajax({
 		url: ajax_url+"/"+action, 
 		data: params,
@@ -3405,7 +3407,7 @@ function geolocationSuccess(position)
 	var crd = position.coords;
 	var params="lat="+crd.latitude;
 	params+="&lng="+crd.longitude;
-	onsenAlert(params);
+	
 	callAjax("reverseGeoCoding",params);
 }
 
