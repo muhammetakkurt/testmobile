@@ -1727,6 +1727,11 @@ jQuery(document).ready(function() {
 	$( document ).on( "change", ".mobile-searcable-area-data-array", function() {
 		callAjax('teslimatList', 'area='+$(this).val());
 	});
+
+	$( document ).on( "change", ".mobile-searcable-teslimat-data-array", function() {
+		var teslimat = $(this).val()+' '+$(".mobile-searcable-area-data-array").val()+' '+$(".mobile-searcable-city-data-array").val();
+		$('#s').val(teslimat);
+	});
 	
 	
 	$( document ).on( "click", ".price", function() {
