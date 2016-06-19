@@ -1690,9 +1690,17 @@ jQuery(document).ready(function() {
 	
 	/*jquery onclick*/
 	
-	$( document ).on( "click", ".price", function() {
+	$( document ).on( "click", ".s", function() {
 		setCartValue();
 	});
+
+
+	var testData = [{ id: 0, text: 'enhancement' }, { id: 1, text: 'bug' }, { id: 2, text: 'duplicate' }, { id: 3, text: 'invalid' }, { id: 4, text: 'wontfix' }];
+ 
+	$(".mobile-searcable-data-array").select2({
+	  data: testData
+	});
+	 
 	$( document ).on( "change", ".qty", function() {
 		setCartValue();
 	});
