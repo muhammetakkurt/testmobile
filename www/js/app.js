@@ -306,8 +306,8 @@ document.addEventListener("pageinit", function(e) {
 		case "page-home":							
 			geoComplete();
 
-			callAjax("cityList" , ""); 
-			
+			callAjax('cityList','');
+
 			search_address=getStorage("search_address");
 			
 			if (typeof search_address === "undefined" || search_address==null || search_address=="" ) { 
@@ -512,6 +512,8 @@ function callAjax(action,params)
 	}
 	
 	dump("action=>"+action);
+
+
 	
 	/*add language use parameters*/
 	params+="&lang_id="+getStorage("default_lang");
@@ -520,6 +522,11 @@ function callAjax(action,params)
 	}
 	
 	dump(ajax_url+"/"+action+"?"+params);
+
+	if (action == 'cityList') {
+		onsenAlert(  data );
+	}
+	
 
     ajax_request = $.ajax({
 		url: ajax_url+"/"+action, 
