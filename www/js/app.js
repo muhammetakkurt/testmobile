@@ -1721,11 +1721,11 @@ jQuery(document).ready(function() {
 
 	
 	$( document ).on( "change", ".mobile-searcable-city-data-array", function() {
-		callAjax('areaList', 'city'+$(this).val());
+		callAjax('areaList', 'city='+$(this).val());
 	});
 
 	$( document ).on( "change", ".mobile-searcable-area-data-array", function() {
-		callAjax('teslimatList', 'area'+$(this).val());
+		callAjax('teslimatList', 'area='+$(this).val());
 	});
 	
 	
