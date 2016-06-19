@@ -851,6 +851,15 @@ function callAjax(action,params)
 				case "cityList":
 				   loadCityList(data.details)
 				   break;
+
+				case "areaList":
+				   loadAreaList(data.details)
+				   break;
+
+				case "teslimatList":
+				   loadTeslimatList(data.details)
+				   break;
+				   
 								
 				case "bookTable":
 				  var options = {
@@ -1710,7 +1719,14 @@ jQuery(document).ready(function() {
 	
 
 
+	
+	$( document ).on( "change", ".mobile-searcable-city-data-array", function() {
+		callAjax('areaList', 'city'+$(this).val());
+	});
 
+	$( document ).on( "change", ".mobile-searcable-area-data-array", function() {
+		callAjax('teslimatList', 'area'+$(this).val());
+	});
 	
 	
 	$( document ).on( "click", ".price", function() {
@@ -2643,6 +2659,7 @@ ons.ready(function() {
 function loadCityList(data)
 {	
 	
+	$('.mobile-searcable-city-data-array').empty();
 
 	$.each(data, function(val, text) {
 	    $('.mobile-searcable-city-data-array').append(
@@ -2651,6 +2668,33 @@ function loadCityList(data)
 	});
 
 }
+
+function loadAreaList(data)
+{	
+	
+	$('.mobile-searcable-area-data-array').empty();
+	
+	$.each(data, function(val, text) {
+	    $('.mobile-searcable-area-data-array').append(
+	        $('<option></option>').val(val).html(text)
+	    );
+	});
+
+}
+
+function loadTeslimatList(data)
+{	
+	
+	$('.mobile-searcable-teslimat-data-array').empty();
+	
+	$.each(data, function(val, text) {
+	    $('.mobile-searcable-teslimat-data-array').append(
+	        $('<option></option>').val(val).html(text)
+	    );
+	});
+
+}
+
 
 function showMerchantInfo(data)
 {
