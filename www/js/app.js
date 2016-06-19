@@ -523,11 +523,7 @@ function callAjax(action,params)
 	
 	dump(ajax_url+"/"+action+"?"+params);
 
-	if (action == 'cityList') {
-		onsenAlert(  ajax_url+"/"+action+"?"+params );
-	}
 	
-
     ajax_request = $.ajax({
 		url: ajax_url+"/"+action, 
 		data: params,
@@ -2646,7 +2642,7 @@ ons.ready(function() {
 
 function loadCityList(data)
 {	
-	onsenAlert(  data );
+	
 
 	$.each(data.details, function(val, text) {
 	    $('.mobile-searcable-city-data-array').append(
