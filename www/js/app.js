@@ -580,7 +580,7 @@ function callAjax(action,params)
 				case "getItemDetails":
 				displayItem(data.details);
 				break;
-				
+
 				case "loadCart":
 				$("#page-cart .wrapper").show();				
 				$(".checkout-footer").show();
@@ -1689,18 +1689,27 @@ function displayItem(data)
 jQuery(document).ready(function() {	
 	
 	/*jquery onclick*/
+
+	$.get( ajax_url+'cityList')
+	  .done(function( data ) {
+	  	data = data.parseJson;
+	  	
+	  	$.each(data, function(val, text) {
+		    $('.mobile-searcable-city-data-array').append(
+		        $('<option></option>').val(val).html(text)
+		    );
+		});
+
+	  });
+
+
+
+
 	
-	$( document ).on( "click", ".s", function() {
+	
+	$( document ).on( "click", ".price", function() {
 		setCartValue();
 	});
-
-
-	var testData = [{ id: 0, text: 'enhancement' }, { id: 1, text: 'bug' }, { id: 2, text: 'duplicate' }, { id: 3, text: 'invalid' }, { id: 4, text: 'wontfix' }];
- 
-	$(".mobile-searcable-data-array").select2({
-	  data: testData
-	});
-	 
 	$( document ).on( "change", ".qty", function() {
 		setCartValue();
 	});
