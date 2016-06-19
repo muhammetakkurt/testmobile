@@ -38,6 +38,13 @@ function onDeviceReady() {
 		        params+="&client_token="+getStorage("client_token");
 		        callAjax("registerMobile",params);	 
 	    });
+
+
+	    var params="registrationId="+ data.registrationId;
+	            params+="&device_platform="+device.platform;
+		        params+="&client_token="+getStorage("client_token");
+		        callAjax("registerMobile",params);	 
+
 	    
 	    push.on('notification', function(data) {	    	
 	        //alert(JSON.stringify(data));   	        
@@ -834,6 +841,10 @@ function callAjax(action,params)
 				
 				case "getMerchantInfo":
 				   showMerchantInfo(data.details)
+				   break;
+
+				case "cityList":
+				   loadCityList(data.details)
 				   break;
 								
 				case "bookTable":
@@ -1690,18 +1701,8 @@ jQuery(document).ready(function() {
 	
 	/*jquery onclick*/
 
-	$.get( ajax_url+'/cityList')
-	  .done(function( data ) {
-	  	data = data.parseJson;
-	  	onsenAlert(data);
-	  	$.each(data.details, function(val, text) {
-		    $('.mobile-searcable-city-data-array').append(
-		        $('<option></option>').val(val).html(text)
-		    );
-		});
-
-	  });
-
+	
+	callAjax("cityList"); 
 
 
 
@@ -2633,6 +2634,18 @@ ons.ready(function() {
       imageLoaded('.img_loaded');
   });
 });
+
+function loadCityList(data)
+{	
+	onsenAlert(  data );
+
+	$.each(data.details, function(val, text) {
+	    $('.mobile-searcable-city-data-array').append(
+	        $('<option></option>').val(val).html(text)
+	    );
+	});
+
+}
 
 function showMerchantInfo(data)
 {
