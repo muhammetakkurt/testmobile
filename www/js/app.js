@@ -305,6 +305,8 @@ document.addEventListener("pageinit", function(e) {
 		
 		case "page-home":							
 			geoComplete();
+
+			callAjax("cityList" , ""); 
 			
 			search_address=getStorage("search_address");
 			
@@ -1702,7 +1704,7 @@ jQuery(document).ready(function() {
 	/*jquery onclick*/
 
 	
-	callAjax("cityList"); 
+	
 
 
 
