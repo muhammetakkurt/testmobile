@@ -2644,7 +2644,7 @@ function loadCityList(data)
 {	
 	
 
-	$.each(data.details, function(val, text) {
+	$.each(data, function(val, text) {
 	    $('.mobile-searcable-city-data-array').append(
 	        $('<option></option>').val(val).html(text)
 	    );
