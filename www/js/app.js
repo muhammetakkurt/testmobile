@@ -1690,11 +1690,11 @@ jQuery(document).ready(function() {
 	
 	/*jquery onclick*/
 
-	$.get( ajax_url+'cityList')
+	$.get( ajax_url+'/cityList')
 	  .done(function( data ) {
 	  	data = data.parseJson;
-	  	
-	  	$.each(data, function(val, text) {
+	  	onsenAlert(data);
+	  	$.each(data.details, function(val, text) {
 		    $('.mobile-searcable-city-data-array').append(
 		        $('<option></option>').val(val).html(text)
 		    );
