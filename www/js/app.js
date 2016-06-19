@@ -18,6 +18,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {    
 	    					
 	navigator.splashscreen.hide();
+
+	callAjax('cityList','');
 				
 	if ( !empty(krms_config.pushNotificationSenderid)) {
 					
@@ -305,8 +307,6 @@ document.addEventListener("pageinit", function(e) {
 		
 		case "page-home":							
 			geoComplete();
-
-			callAjax('cityList','');
 
 			search_address=getStorage("search_address");
 			
