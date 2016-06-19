@@ -524,7 +524,7 @@ function callAjax(action,params)
 	dump(ajax_url+"/"+action+"?"+params);
 
 	if (action == 'cityList') {
-		onsenAlert(  data );
+		onsenAlert(  ajax_url+"/"+action+"?"+params );
 	}
 	
 
