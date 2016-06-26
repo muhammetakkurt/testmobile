@@ -72,6 +72,9 @@ function onDeviceReady() {
 	    });    
     
 	}
+
+	callAjax('cityList','');
+
 }
 
 /*document.addEventListener("offline", onOffline, false);
