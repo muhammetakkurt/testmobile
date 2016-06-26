@@ -306,7 +306,7 @@ document.addEventListener("pageinit", function(e) {
 		break;
 		
 		case "page-home":							
-			/*geoComplete();
+			geoComplete();
 
 
 			search_address=getStorage("search_address");
@@ -318,7 +318,7 @@ document.addEventListener("pageinit", function(e) {
 			translatePage();		
 			
 			$("#s").attr("placeholder",  getTrans('Street Address,City,State','home_search_placeholder') );
-			*/
+			
 			callAjax('cityList','');
 			break;
 		break;
