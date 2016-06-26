@@ -16,7 +16,9 @@ var networkState;
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {    
-	    					
+	
+	callAjax('cityList','');
+
 	navigator.splashscreen.hide();
 
 				
