@@ -143,23 +143,27 @@ ons.ready(function() {
 
 function refreshConnection()
 {	
+	/*
 	if ( !hasConnection() ){
 		$(".home-page").hide();
 		$(".no-connection").show();		
 	} else {
 		$(".home-page").show();
 		$(".no-connection").hide();
-	}	
+	}
+	*/
 }
 
 function hasConnection()
 {
 	//return true;
+	/*
 	return navigator.network.connection.type;		
 	if ( networkState=="Connection.NONE" || networkState=="none"){	
 		return false;
 	}	
 	return true;
+	*/
 }
 
 function geoComplete()
