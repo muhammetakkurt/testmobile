@@ -155,7 +155,7 @@ function refreshConnection()
 function hasConnection()
 {
 	//return true;
-	networkState = navigator.network.connection.type;		
+	return navigator.network.connection.type;		
 	if ( networkState=="Connection.NONE" || networkState=="none"){	
 		return false;
 	}	
