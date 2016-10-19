@@ -17,7 +17,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {    
 	
-	callAjax('cityList','');
+	
 
 	navigator.splashscreen.hide();
 
@@ -74,6 +74,8 @@ function onDeviceReady() {
 	    });    
     
 	}
+
+	callAjax('cityList','');
 
 }
 
@@ -143,23 +145,27 @@ ons.ready(function() {
 
 function refreshConnection()
 {	
+	/*
 	if ( !hasConnection() ){
 		$(".home-page").hide();
 		$(".no-connection").show();		
 	} else {
 		$(".home-page").show();
 		$(".no-connection").hide();
-	}	
+	}
+	*/
 }
 
 function hasConnection()
 {
-	//return true;
-	networkState = navigator.network.connection.type;		
+	return true;
+	/*
+	return navigator.network.connection.type;		
 	if ( networkState=="Connection.NONE" || networkState=="none"){	
 		return false;
 	}	
 	return true;
+	*/
 }
 
 function geoComplete()
@@ -1261,7 +1267,7 @@ function callAjax(action,params)
 		hideAllModal();		
 		if ( action=="getLanguageSettings" || action=="registerMobile"){
 		} else {			
-			onsenAlert( getTrans("Network error has occurred please try again!",'network_error') );		
+			onsenAlert( getTrans(action+"Network error has occurred please try again!",'network_error') );		
 		}	
 	}
    });       	

@@ -17,7 +17,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {    
 	
-	callAjax('cityList','');
+	
 
 	navigator.splashscreen.hide();
 
@@ -74,6 +74,8 @@ function onDeviceReady() {
 	    });    
     
 	}
+
+	callAjax('cityList','');
 
 }
 
@@ -156,7 +158,7 @@ function refreshConnection()
 
 function hasConnection()
 {
-	//return true;
+	return true;
 	/*
 	return navigator.network.connection.type;		
 	if ( networkState=="Connection.NONE" || networkState=="none"){	
@@ -1265,7 +1267,7 @@ function callAjax(action,params)
 		hideAllModal();		
 		if ( action=="getLanguageSettings" || action=="registerMobile"){
 		} else {			
-			onsenAlert( getTrans("Network error has occurred please try again!",'network_error') );		
+			onsenAlert( getTrans(action+"Network error has occurred please try again!",'network_error') );		
 		}	
 	}
    });       	
