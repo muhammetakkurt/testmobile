@@ -25,7 +25,7 @@
     },
     "installed_plugins": {
         "cordova-plugin-ios-no-export-compliance": {
-            "PACKAGE_NAME": "com.acliginigider.app"
+            "PACKAGE_NAME": "com.acligini.app"
         }
     },
     "dependent_plugins": {},
