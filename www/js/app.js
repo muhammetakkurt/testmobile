@@ -74,7 +74,7 @@ function onDeviceReady() {
 	    });    
     
 	}
-
+	setLanguage(3);
 	callAjax('cityList','');
 
 }
