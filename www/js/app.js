@@ -1945,9 +1945,83 @@ function menuCategoryResult(data)
 		$.each( data.menu_category, function( key, val ) { 			  
              htm+='<ons-list-item modifier="tappable" class="row" onclick="loadmenu('+
              val.cat_id+','+val.merchant_id+');">'+val.category_name+'</ons-list-item>';
+
+
+             
+					htm+='<ons-list class="restaurant-list">';
+					$.each( val.items, function( key, val ) { 		 
+								
+						 
+							 if (val.not_available==2){
+							     htm+='<ons-list-item modifier="tappable" class="list-item-container" onclick="itemNotAvailable(1)" >';	
+							 } else {
+							 	  var single_add_item=getStorage("single_add_item");
+							 	  dump("=>"+single_add_item);
+							 	  if (val.single_item==2 && single_add_item==2){
+							 	  	  item_auto_price="0|";
+							 	  	  item_auto_discount="0";
+							 	  	  if ( val.prices.length>0){
+							 	  	  	  $.each( val.prices, function( key_price, price ) { 
+							 	  	  	  	   if (!empty(price.price_discount_pretty)){
+							 	  	  	  	   	   //item_auto_price = "'"+price.price+"|'";
+							 	  	  	  	   	   item_auto_price = price.price+"|";
+							 	  	  	  	   	   item_auto_discount=parseInt(price.price)-parseInt(price.price_discount)
+							 	  	  	  	   } else {
+							 	  	  	  	   	   //item_auto_price=  "'"+price.price+"|'";
+							 	  	  	  	   	   item_auto_price =  price.price+"|";
+							 	  	  	  	   }
+							 	  	  	  });
+							 	  	  }
+							 	  	  /*htm+='<ons-list-item modifier="tappable" class="list-item-container" onclick="autoAddToCart('+val.item_id+','+item_auto_price+','+item_auto_discount+');"  >';*/
+							 	  	  			 	  	 
+				htm+='<ons-list-item modifier="tappable" class="list-item-container"';
+				htm+='onclick="autoAddToCart('+ "'"+val.item_id+"'," +  "'"+item_auto_price+"'," + "'"+item_auto_discount+"'"  +');"  >';
+							 	  	  
+							 	  } else {
+							          htm+='<ons-list-item modifier="tappable" class="list-item-container" onclick="loadItemDetails('+val.item_id+','+val.merchant_id+','+val.cat_id+');"  >';
+							 	  }
+							 }
+						 
+				         htm+='<ons-row class="row">';
+				         
+				             htm+='<ons-col class="col-image" width="35%">';
+				                htm+='<div class="logo-wrap2" >';
+				                  htm+='<div class="img_loaded" >';
+				                  htm+='<img src="'+val.photo+'" />';
+				                  htm+='</div>';
+				                htm+='</div>';
+				             htm+='</ons-col>';
+				             
+				                htm+='<ons-col class="col-description" width="65%">';
+				                htm+='<p class="restauran-title concat-text">'+val.item_name+'</p>';
+				                htm+='<p class="concat-text">'+val.item_description+'</p>';   
+				                                     
+				                if ( val.prices.length>0){
+					                $.each( val.prices, function( key_price, price ) { 
+					                   if (!empty(price.price_discount_pretty)){
+					                   	   htm+='<p class="p-small">'+price.size+' <price class="discount">'+price.price_pretty+'</price>'; 
+					                   	   htm+='<price>'+price.price_discount_pretty+'</price>';
+					                   	   htm+='</p>';
+					                   } else {
+					                   	   htm+='<p class="p-small">'+price.size+' <price>'+price.price_pretty+'</price></p>';
+					                   }                   
+					                });
+				                }
+				                                
+				                if (val.not_available==2){
+				                	htm+='<p>item not available</p>';
+				                }
+				                
+				             htm+='</ons-col>';
+				         htm+='</ons-row>';
+				        htm+='</ons-list-item>';
+				    });			
+				    htm+='</ons-list>';    
+
 		});	
 		htm+='</ons-list>';
 		createElement('category-list',htm);	
+		imageLoaded('.img_loaded');
 	} else {
 		onsenAlert(  getTrans("This restaurant has not published their menu yet.",'this_restaurant_no_menu') );
 	}	
