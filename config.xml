@@ -4,7 +4,7 @@
     xmlns:android = "http://schemas.android.com/apk/res/android"
     id        = "acliginigider.mobile.app"
     version   = "1.5.2">
-    <name>Açlığını Gider</name>
+    <name>acliginigider</name>
     <description>
         Açlığını Gider
     </description>

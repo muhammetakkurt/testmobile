@@ -231,25 +231,25 @@
   <ons-dialog var="navDialog" style="width:90%;height:350px;" cancelable  >
 
   <ons-page id="page-filter-options" >  
-	  <ons-toolbar> 
-	      <div class="center white trn" data-trn-key="filter_results">Filter Results</div>   
-	      
-	      <div class="right">
+    <ons-toolbar> 
+        <div class="center white trn" data-trn-key="filter_results">Filter Results</div>   
+        
+        <div class="right">
              <ons-toolbar-button onclick="applyFilter()"><ons-icon icon="fa-check"></ons-toolbar-button>         
           </div>
-	      
-	  </ons-toolbar>
-	  
-	  <div class="wrapper">
-	      <div class="field-wrapper">
-	      <input type="text" name="restaurant_name"  class="restaurant_name text-input text-input--underbar has_validation" 
-	      placeholder="Enter Restaurant name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
-	      </div>
-	  </div>	
-	  
-	  <ons-scroller class="filter-options" id="filter-options-list">	  
-	  </ons-scroller> 	 
-	  	  	   
+        
+    </ons-toolbar>
+    
+    <div class="wrapper">
+        <div class="field-wrapper">
+        <input type="text" name="restaurant_name"  class="restaurant_name text-input text-input--underbar has_validation" 
+        placeholder="Enter Restaurant name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+        </div>
+    </div>  
+    
+    <ons-scroller class="filter-options" id="filter-options-list">    
+    </ons-scroller>    
+             
   </ons-page>
   </ons-dialog> 
 </script>
@@ -348,8 +348,8 @@
    <div class="item-header"></div> 
    
    <div class="wrapper">
-	   <p class="title concat-text"></p>
-	   <p class="description"></p>
+     <p class="title concat-text"></p>
+     <p class="description"></p>
    </div>
    
   
@@ -359,9 +359,9 @@
     </form>
     
     <button class="button green-btn button--large trn" data-trn-key="add_to_cart" onclick="addToCart();">
-	Add to Cart
-	<div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
-	</button>
+  Add to Cart
+  <div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
+  </button>
       
 </ons-page>
 </script>
@@ -424,13 +424,13 @@
    
    <ons-list-item modifier="tappable" class="delivery_asap_wrap">
        <label class="checkbox">
-		  <input type="checkbox" name="delivery_asap" value="1" class="delivery_asap">
-		  <div class="checkbox__checkmark"></div>
-		  <span class="ons-checkbox-inner small-font-dim trn" data-trn-key="deliver_asap">
-		  Deliver Asap
-		  </span>
-		</label>
-	</ons-list-item>
+      <input type="checkbox" name="delivery_asap" value="1" class="delivery_asap">
+      <div class="checkbox__checkmark"></div>
+      <span class="ons-checkbox-inner small-font-dim trn" data-trn-key="deliver_asap">
+      Deliver Asap
+      </span>
+    </label>
+  </ons-list-item>
    
    <div class="wrapper">
      <p class="p-normal pts_earn_label"></p>
@@ -450,8 +450,8 @@
    </ons-list>       
       
    <button class="button green-btn button--large trn" onclick="checkOut();" data-trn-key="checkout">
-	Checkout
-	<div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
+  Checkout
+  <div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
    </button>
    
    </div>
@@ -539,10 +539,10 @@
            <ons-col width="40px">
            
            <label class="checkbox">
-			  <input type="checkbox" name="iagree" class="iagree" value="1">
-			  <div class="checkbox__checkmark"></div>
-			  <span class="ons-checkbox-inner"></span>
-			</label>
+        <input type="checkbox" name="iagree" class="iagree" value="1">
+        <div class="checkbox__checkmark"></div>
+        <span class="ons-checkbox-inner"></span>
+      </label>
            
            </ons-col>
            <ons-col >
@@ -553,8 +553,8 @@
          
    
    <button class="button green-btn button--large trn" onclick="clientRegistration();" data-trn-key="create_account" >
-	Create Account
-	<div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
+  Create Account
+  <div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
    </button>
    
    </div>
@@ -635,20 +635,20 @@
    </div>
    
    <div class="wrapper">
-	   <div class="field-wrapper">	     
-	     <label class="switch">
-			  <input type="checkbox" value="2" class="switch__input save_address" name="save_address" >
-			  <div class="switch__toggle"></div>
-		  </label>  		  
-		  <span class="small-font-dim trn" data-trn-key="save_address_book" style="margin-top: 8px; display: inline-block">
-		    Save to my address book
-		  </span>
-	    </div> 
+     <div class="field-wrapper">       
+       <label class="switch">
+        <input type="checkbox" value="2" class="switch__input save_address" name="save_address" >
+        <div class="switch__toggle"></div>
+      </label>        
+      <span class="small-font-dim trn" data-trn-key="save_address_book" style="margin-top: 8px; display: inline-block">
+        Save to my address book
+      </span>
+      </div> 
     </div> 
    
    <button class="button green-btn button--large trn" onclick="clientShipping();" data-trn-key="select_payment_method">
-	Select Payment Method
-	<div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
+  Select Payment Method
+  <div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
    </button>
    </form>
 
@@ -659,13 +659,13 @@
   <ons-dialog var="dialogAddressBook" style="width:90%;height:250px;" cancelable  >
 
   <ons-page id="page-dialog-addressbook" >  
-	  <ons-toolbar> 
-	      <div class="center white trn" data-trn-key="address_book">Address Book</div>   	      	      	      
-	  </ons-toolbar>	  
-	  	
-	  <ons-scroller id="addressbook-popup">   
+    <ons-toolbar> 
+        <div class="center white trn" data-trn-key="address_book">Address Book</div>                          
+    </ons-toolbar>    
+      
+    <ons-scroller id="addressbook-popup">   
       </ons-scroller>  
-	  	  	   	  	  
+                    
   </ons-page>
   </ons-dialog> 
 </script>
@@ -785,8 +785,8 @@
    </div>
    
    <button class="button green-btn button--large trn" onclick="placeOrder();" data-trn-key="place_order">
-	Place Order
-	<div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
+  Place Order
+  <div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
    </button>
    </form>
 
@@ -950,8 +950,8 @@
 
    
    <button class="button green-btn button--large trn" onclick="submitBooking();" data-trn-key="book_now">
-	Book Now!
-	<div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
+  Book Now!
+  <div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
    </button>
      
    </form>
@@ -1060,8 +1060,8 @@
    
    
    <button class="button green-btn button--large trn" onclick="addReview();" data-trn-key="published_review">
-	Publish Review
-	<div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
+  Publish Review
+  <div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
    </button>
    
    </div>
@@ -1106,25 +1106,25 @@
   <ons-dialog var="dialogBrowseResto" style="width:90%;height:170px;" cancelable  >
 
   <ons-page id="page-filterbrowse" >  
-	  <ons-toolbar> 
-	      <div class="center white trn" data-trn-key="filter_resto">Filter Restaurant</div>   	      	      	      
-	  </ons-toolbar>	  	  
-	  	  	   
-	  
-	  <form id="frm-filterbrowse" class="frm-filterbrowse" method="post">   
+    <ons-toolbar> 
+        <div class="center white trn" data-trn-key="filter_resto">Filter Restaurant</div>                           
+    </ons-toolbar>        
+             
+    
+    <form id="frm-filterbrowse" class="frm-filterbrowse" method="post">   
       <div class="wrapper">
-	      <div class="field-wrapper">
-	      <input type="text" name="restaurant_name"  class="restaurant_name text-input text-input--underbar has_validation" 
-	      placeholder="Enter Restaurant name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
-	      </div>
-	  </div>
-	  
-	  <button class="trn button green-btn button--large" onclick="submitFilterBrowse();" data-trn-key="search" >
-		Search
-		<div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
-	   </button>
+        <div class="field-wrapper">
+        <input type="text" name="restaurant_name"  class="restaurant_name text-input text-input--underbar has_validation" 
+        placeholder="Enter Restaurant name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+        </div>
+    </div>
+    
+    <button class="trn button green-btn button--large" onclick="submitFilterBrowse();" data-trn-key="search" >
+    Search
+    <div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
+     </button>
      </form>
-	  
+    
   </ons-page>
   </ons-dialog> 
 </script>
@@ -1144,12 +1144,12 @@
    </ons-toolbar>
    
     <div class="profile-pic-wrap">
-	    <div class="avatar-wrap">
-	      <div class="img_loaded">
-	      <img class="avatar" src=""/>
-	      </div>
-	    </div>	   
-	 </div>
+      <div class="avatar-wrap">
+        <div class="img_loaded">
+        <img class="avatar" src=""/>
+        </div>
+      </div>     
+   </div>
    
    <form id="frm-profile" class="frm-profile" method="post">   
    <div class="wrapper">
@@ -1181,8 +1181,8 @@
    </div>
    
    <button class="trn button green-btn button--large" onclick="saveProfile();" data-trn-key="save">
-	Save
-	<div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
+  Save
+  <div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
    </button>
    </form>      
               
@@ -1224,7 +1224,7 @@
       <br/>
       
       <button class="trn button green-btn button--large" onclick="showLogin();" data-trn-key="login">
-	  Log In	  
+    Log In    
       </button>
       
       <br/>
@@ -1284,8 +1284,8 @@
    </div>
    
    <button class="button green-btn button--large trn" onclick="login();" data-trn-key="login">
-	Login
-	<div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
+  Login
+  <div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
    </button>
    </form>      
       
@@ -1309,11 +1309,11 @@
   <ons-dialog var="dialogForgotPass" style="width:90%;height:250px;" cancelable  >
 
   <ons-page id="page-forgotpass" >  
-	  <ons-toolbar> 
-	      <div class="center white trn" data-trn-key="forgot_pass">Forgot Password</div>  	      	      
-	  </ons-toolbar>
-	  
-	  <form id="frm-forgotpass" class="frm-forgotpass" method="post">   
+    <ons-toolbar> 
+        <div class="center white trn" data-trn-key="forgot_pass">Forgot Password</div>                  
+    </ons-toolbar>
+    
+    <form id="frm-forgotpass" class="frm-forgotpass" method="post">   
       <div class="wrapper">
       
       <p class="center small-font-dim trn" data-trn-key="forgot_pass_message">
@@ -1329,11 +1329,11 @@
       
       <div class="wrapper center">
       <button class="trn button green-btn" onclick="forgotPassword();" data-trn-key="reset_password">
-	  Reset Password	  
-	  </button>
-	  </div>
-	  </form>
-	    
+    Reset Password    
+    </button>
+    </div>
+    </form>
+      
   </ons-page>
   </ons-dialog> 
 </script>
@@ -1391,10 +1391,10 @@
            <ons-col width="40px">
            
            <label class="checkbox">
-			  <input type="checkbox" name="iagree" class="iagree" value="1">
-			  <div class="checkbox__checkmark"></div>
-			  <span class="ons-checkbox-inner"></span>
-			</label>
+        <input type="checkbox" name="iagree" class="iagree" value="1">
+        <div class="checkbox__checkmark"></div>
+        <span class="ons-checkbox-inner"></span>
+      </label>
            
            </ons-col>
            <ons-col >
@@ -1406,8 +1406,8 @@
    
    
    <button class="trn button green-btn button--large" onclick="signup();" data-trn-key="create_account">
-	Create Account
-	<div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
+  Create Account
+  <div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
    </button>
    
    </div>
@@ -1536,16 +1536,16 @@
       <div class="field-wrapper">
          <span class="small-font-dim trn" data-trn-key="defaul_address">Default address</span>
          <label class="switch">
-			  <input type="checkbox" value="2" class="switch__input as_default" name="as_default" >
-			  <div class="switch__toggle"></div>
-		  </label>  		  
+        <input type="checkbox" value="2" class="switch__input as_default" name="as_default" >
+        <div class="switch__toggle"></div>
+      </label>        
       </div>     
                         
    </div>
       
    <button class="trn button green-btn button--large" onclick="saveAddressBook();" data-trn-key="save">
-	Save
-	<div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
+  Save
+  <div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
    </button>
    </form>   
    
@@ -1557,21 +1557,21 @@
   <ons-dialog var="pushDialog" style="width:90%;height:200px;"  >
 
   <ons-page id="page-notification" >  
-	  <ons-toolbar> 
-	      <div class="center white push-title"></div>   	      	      
-	  </ons-toolbar>
+    <ons-toolbar> 
+        <div class="center white push-title"></div>                   
+    </ons-toolbar>
 
-	  <div class="wrapper center pad-top20">
-	  <p class="small-font-dim push-message"></p>
-	  
-	   <p>          
+    <div class="wrapper center pad-top20">
+    <p class="small-font-dim push-message"></p>
+    
+     <p>          
           <ons-button class="trn button green-btn button--large" onclick="showOrders2();" data-trn-key="view">
           View</ons-button>
           <button onclick="pushDialog.hide();" class="button button--quiet trn" data-trn-key="cancel">Cancel</button>
         </p>
-	  
-	  </div>  
-	  	  	   
+    
+    </div>  
+             
   </ons-page>
   </ons-dialog> 
 </script>
@@ -1580,22 +1580,22 @@
   <ons-dialog var="pushcampaignDialog" style="width:90%;height:200px;"  >
 
   <ons-page id="page-notificationcampaign" >  
-	  <ons-toolbar> 
-	      <div class="center white push-title"></div>   	      	      
-	  </ons-toolbar>
+    <ons-toolbar> 
+        <div class="center white push-title"></div>                   
+    </ons-toolbar>
 
-	  <div class="wrapper center pad-top20">
-	  <p class="small-font-dim push-message"></p>
-	  
-	   <p>          
+    <div class="wrapper center pad-top20">
+    <p class="small-font-dim push-message"></p>
+    
+     <p>          
           <ons-button class="trn button green-btn button--large" 
           onclick="pushcampaignDialog.hide();" data-trn-key="ok">
           Ok
           </ons-button>          
         </p>
-	  
-	  </div>  
-	  	  	   
+    
+    </div>  
+             
   </ons-page>
   </ons-dialog> 
 </script>
@@ -1617,7 +1617,7 @@
       
    <form id="frm-settings" class="frm-settings" method="post">   
    <input type="hidden" name="country_code_set" id="country_code_set" class="country_code_set">   
-   		   
+         
    <div class="wrapper">
    
      <div class="settings-header trn" data-trn-key="device_id">Device ID</div>
@@ -1653,8 +1653,8 @@
             
    
    <button class="button green-btn button--large trn" onclick="saveSettings();" data-trn-key="save">
-	Save
-	<div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
+  Save
+  <div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
    </button>
    
    </div>
@@ -1668,19 +1668,19 @@
   <ons-dialog var="locationDialog" style="width:90%;height:350px;" cancelable  >
 
   <ons-page id="page-locations" >  
-	  <ons-toolbar> 
-	      <div class="center white trn" data-trn-key="select_country">Select Country</div>   	      	      	      
-	      
-	      <div class="right">         
+    <ons-toolbar> 
+        <div class="center white trn" data-trn-key="select_country">Select Country</div>                          
+        
+        <div class="right">         
             <ons-toolbar-button onclick="locationDialog.hide();" >
             <ons-icon icon="ion-checkmark-round"></ons-toolbar-button>
           </div>
       
-	  </ons-toolbar>
-	  
-	  <ons-scroller class="location-options" id="location-options-list">	  
-	  </ons-scroller> 	 
-	  	  	   
+    </ons-toolbar>
+    
+    <ons-scroller class="location-options" id="location-options-list">    
+    </ons-scroller>    
+             
   </ons-page>
   </ons-dialog> 
 </script>
@@ -1689,25 +1689,25 @@
   <ons-dialog var="addressDialog" style="width:90%;height:200px;" cancelable  >
 
   <ons-page id="page-adddresspopup" >  
-	  <ons-toolbar> 
-	      <div class="center white trn" data-trn-key="enter_your_location">Enter your location</div>   	      	      
-	  </ons-toolbar>
+    <ons-toolbar> 
+        <div class="center white trn" data-trn-key="enter_your_location">Enter your location</div>                  
+    </ons-toolbar>
 
-	  <form id="frm-adddresspopup" class="frm-adddresspopup" method="post">   
-	  <div class="wrapper center pad-top20">	 
-	   <div class="field-wrapper">
+    <form id="frm-adddresspopup" class="frm-adddresspopup" method="post">   
+    <div class="wrapper center pad-top20">   
+     <div class="field-wrapper">
           <input type="text" id="new_s" name="new_s"  class="new_s text-input text-input--underbar has_validation" 
            placeholder="Enter your address" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
-       </div>	  	  	  
-	  </div>  
-	  
-	  <div class="wrapper center">
+       </div>           
+    </div>  
+    
+    <div class="wrapper center">
       <button class="button green-btn trn" onclick="changeAddress();" data-trn-key="change_address">
-	  Change address	  
-	  </button>
-	  </div>
-	  </form>
-	  	  	   
+    Change address    
+    </button>
+    </div>
+    </form>
+             
   </ons-page>
   </ons-dialog> 
 </script>
@@ -1716,18 +1716,18 @@
   <ons-dialog var="languageOptions" style="width:90%;height:350px;" cancelable  >
 
   <ons-page id="page-languageoptions" >  
-	  <ons-toolbar> 
-	      <div class="center white trn" data-trn-key="select_your_language">Select your language</div>   	      	      	      	      
-	      <div class="right">         
+    <ons-toolbar> 
+        <div class="center white trn" data-trn-key="select_your_language">Select your language</div>                                  
+        <div class="right">         
             <ons-toolbar-button onclick="languageOptions.hide();" >
             <ons-icon icon="ion-checkmark-round"></ons-toolbar-button>
           </div>
       
-	  </ons-toolbar>	  	 
+    </ons-toolbar>       
       
-	  <ons-scroller class="language-options" id="language-options-list">	  
-	  </ons-scroller> 	 
-	  	  	  	  	  
+    <ons-scroller class="language-options" id="language-options-list">    
+    </ons-scroller>    
+                    
   </ons-page>
   </ons-dialog> 
 </script>
@@ -1814,8 +1814,8 @@
    </div>
    
    <button class="trn button green-btn button--large" onclick="atzPayNow();" data-trn-key="pay_now">
-	Pay Now
-	<div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
+  Pay Now
+  <div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
    </button>
    
    </form> 
@@ -1827,18 +1827,18 @@
   <ons-dialog var="ExpirationMonthDialog" style="width:90%;height:350px;" cancelable  >
 
   <ons-page id="page-expirationmonth" >  
-	  <ons-toolbar> 
-	       	      	      	      
-	      <div class="right">         
+    <ons-toolbar> 
+                                
+        <div class="right">         
             <ons-toolbar-button onclick="ExpirationMonthDialog.hide();" >
             <ons-icon icon="ion-checkmark-round"></ons-toolbar-button>
           </div>
       
-	  </ons-toolbar>
-	  
-	  <ons-scroller class="expiration-options" id="expiration-options-list">	  
-	  </ons-scroller> 	 
-	  	  	   
+    </ons-toolbar>
+    
+    <ons-scroller class="expiration-options" id="expiration-options-list">    
+    </ons-scroller>    
+             
   </ons-page>
   </ons-dialog> 
 </script>
@@ -1847,18 +1847,18 @@
   <ons-dialog var="showExpirationYearDialog" style="width:90%;height:350px;" cancelable  >
 
   <ons-page id="page-expiration-year" >  
-	  <ons-toolbar> 
-	       	      	      	      
-	      <div class="right">         
+    <ons-toolbar> 
+                                
+        <div class="right">         
             <ons-toolbar-button onclick="showExpirationYearDialog.hide();" >
             <ons-icon icon="ion-checkmark-round"></ons-toolbar-button>
           </div>
       
-	  </ons-toolbar>
-	  
-	  <ons-scroller class="expiration-year-options-list" id="expiration-year-options-list">	  
-	  </ons-scroller> 	 
-	  	  	   
+    </ons-toolbar>
+    
+    <ons-scroller class="expiration-year-options-list" id="expiration-year-options-list">   
+    </ons-scroller>    
+             
   </ons-page>
   </ons-dialog> 
 </script>
@@ -1867,18 +1867,18 @@
   <ons-dialog var="showCountryDialog" style="width:90%;height:350px;" cancelable  >
 
   <ons-page id="page-show-country" >  
-	  <ons-toolbar> 
-	       	      	      	      
-	      <div class="right">         
+    <ons-toolbar> 
+                                
+        <div class="right">         
             <ons-toolbar-button onclick="showCountryDialog.hide();" >
             <ons-icon icon="ion-checkmark-round"></ons-toolbar-button>
           </div>
       
-	  </ons-toolbar>
-	  
-	  <ons-scroller class="country-options-list" id="country-options-list">	  
-	  </ons-scroller> 	 
-	  	  	   
+    </ons-toolbar>
+    
+    <ons-scroller class="country-options-list" id="country-options-list">   
+    </ons-scroller>    
+             
   </ons-page>
   </ons-dialog> 
 </script>
@@ -1928,8 +1928,8 @@
       </div>
 
    <button class="trn button green-btn button--large" onclick="stripePayNow();" data-trn-key="pay_now">
-	Pay Now
-	<div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
+  Pay Now
+  <div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
    </button>
    
    </form> 
@@ -1971,7 +1971,7 @@
    </div>
    
    <button class="trn button green-btn button--large" onclick="validateCLient();" data-trn-key="submit">
-	Submit
+  Submit
    </button>
    
    </div>
@@ -2131,7 +2131,7 @@
       </div>
       
       <button class="trn button green-btn button--large" onclick="verifyAccount();" data-trn-key="submit">
-	  Submit
+    Submit
       </button>
     
     </div>
@@ -2167,36 +2167,36 @@
    <div class="manual-address-input">
         <form id="frm-manual-address" class="frm-manual-address" method="post">
         <div class="wrapper">
-	      <div class="field-wrapper">
-	      <input type="text" name="stree_1"  class="stree_1 text-input text-input--underbar has_validation" 
-	      placeholder="Street" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
-	      </div>      
-	   </div>      
-	   <div class="wrapper">
-	      <div class="field-wrapper">
-	      <input type="text" name="city_1"  class="city_1 text-input text-input--underbar has_validation" 
-	      placeholder="City" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
-	      </div>      
-	   </div>
-	   <div class="wrapper">
-	      <div class="field-wrapper">
-	      <input type="text" name="state_1"  class="state_1 text-input text-input--underbar has_validation" 
-	      placeholder="State" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
-	      </div>      
-	   </div>
-	   <div class="wrapper">
-	      <div class="field-wrapper">
-	      <input type="text" name="zipcode_1"  class="zipcode_1 text-input text-input--underbar" 
-	      placeholder="Postal code/Zip Code" value=""  >
-	      </div>      
-	   </div>
-	   
-	   <div class="wrapper">
-	   <button class="button green-btn button--large trn" onclick="setManualAddress();" data-trn-key="submit">
-		Submit		
-	   </button>
-	   </div>
-	   </form>
+        <div class="field-wrapper">
+        <input type="text" name="stree_1"  class="stree_1 text-input text-input--underbar has_validation" 
+        placeholder="Street" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+        </div>      
+     </div>      
+     <div class="wrapper">
+        <div class="field-wrapper">
+        <input type="text" name="city_1"  class="city_1 text-input text-input--underbar has_validation" 
+        placeholder="City" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+        </div>      
+     </div>
+     <div class="wrapper">
+        <div class="field-wrapper">
+        <input type="text" name="state_1"  class="state_1 text-input text-input--underbar has_validation" 
+        placeholder="State" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+        </div>      
+     </div>
+     <div class="wrapper">
+        <div class="field-wrapper">
+        <input type="text" name="zipcode_1"  class="zipcode_1 text-input text-input--underbar" 
+        placeholder="Postal code/Zip Code" value=""  >
+        </div>      
+     </div>
+     
+     <div class="wrapper">
+     <button class="button green-btn button--large trn" onclick="setManualAddress();" data-trn-key="submit">
+    Submit    
+     </button>
+     </div>
+     </form>
    </div>
    
 </ons-page>
@@ -2331,7 +2331,7 @@
    </div>
    
    <button class="button green-btn button--large trn track_driver" onclick="showTrackingPage();" data-trn-key="track_driver">
-	Track Driver	
+  Track Driver  
    </button>
 
 </ons-page>
@@ -2363,8 +2363,8 @@
             </ons-col>
             <ons-col width="25%" class="center">
                <a class="button green-btn button--large call_driver">
-				<ons-icon icon="ion-android-call">
-			   </a>
+        <ons-icon icon="ion-android-call">
+         </a>
             </ons-col>
          </ons-row>
       </div>
@@ -2399,8 +2399,8 @@
     </div>   
     
     <button class="button green-btn button--large trn" onclick="submitContactForm();" data-trn-key="submit" style="margin-top:10px;" >
-	Submit
-	<div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
+  Submit
+  <div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
    </button>
     
    </form>
@@ -2415,28 +2415,28 @@
   <ons-dialog var="tipsDialog" style="width:60%;height:290px;" cancelable  >
 
   <ons-page id="page-tips" >  
-	  <ons-toolbar> 
-	      <div class="center white trn" data-trn-key="select_tips">Select Tips</div>   	      	      
-	  </ons-toolbar>
+    <ons-toolbar> 
+        <div class="center white trn" data-trn-key="select_tips">Select Tips</div>                  
+    </ons-toolbar>
 
-	  <ons-list>
-	    <ons-list-item modifier="tappable" onclick="setTips(10);" >
-	      10%
-	    </ons-list-item>
-	    <ons-list-item modifier="tappable" onclick="setTips(15);" >
-	      15%
-	    </ons-list-item>
-	    <ons-list-item modifier="tappable" onclick="setTips(20);" >
-	      20%
-	    </ons-list-item>
-	    <ons-list-item modifier="tappable" onclick="setTips(25);" >
-	      25%
-	    </ons-list-item>
-	    <ons-list-item modifier="tappable" onclick="removeTips();" >
-	      <span class="trn" data-trn-key="remove_tips" >Remove Tips</span>
-	    </ons-list-item>
-	  </ons-list>
-	  
+    <ons-list>
+      <ons-list-item modifier="tappable" onclick="setTips(10);" >
+        10%
+      </ons-list-item>
+      <ons-list-item modifier="tappable" onclick="setTips(15);" >
+        15%
+      </ons-list-item>
+      <ons-list-item modifier="tappable" onclick="setTips(20);" >
+        20%
+      </ons-list-item>
+      <ons-list-item modifier="tappable" onclick="setTips(25);" >
+        25%
+      </ons-list-item>
+      <ons-list-item modifier="tappable" onclick="removeTips();" >
+        <span class="trn" data-trn-key="remove_tips" >Remove Tips</span>
+      </ons-list-item>
+    </ons-list>
+    
   </ons-page>
   </ons-dialog> 
 </script>
@@ -2522,19 +2522,19 @@
       </div> 
       
      <button class="trn button green-btn button--large" onclick="saveCC();" data-trn-key="save">
-		Save
-		<div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
-	 </button>  
+    Save
+    <div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
+   </button>  
 
-	 <br/> 
-	 
+   <br/> 
+   
      <button class="trn button button--large delete-cc" onclick="deleteCC();" data-trn-key="delete">
-		Delete		
-	 </button>  
-	  
-	  
+    Delete    
+   </button>  
+    
+    
       
-   </form>	  
+   </form>    
    </div>
    
 </ons-page>
